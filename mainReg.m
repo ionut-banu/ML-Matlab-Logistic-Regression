@@ -7,10 +7,10 @@ clear ; close all; clc
 %% Part 1 - Load Data
 
 fid = fopen('crx.data');
-FC = textscan(fid, '%s%f%f%s%s%s%s%s%s%s%s%s%s%s%s%s', 'Delimiter', ',');
+FC = textscan(fid, '%s%f%f%s%s%s%s%f%s%s%s%s%s%s%s%s', 'Delimiter', ',');
 fclose(fid);
 
-Xtrain = [FC{1,2} FC{1,3}]; 
+Xtrain = [FC{1,2} FC{1,8}]; 
 ytrain = cell2mat(FC{1,16}) == '+';
 mtrain = length(ytrain); % number of training examples
 
@@ -70,9 +70,3 @@ ylabel('Var 2')
 
 legend('Approved', 'Not approved', 'Decision Boundry');
 hold off;
-
-
-
-
-
-

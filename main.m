@@ -66,14 +66,3 @@ ylabel('Var 2')
 legend('Approved', 'Not approved', 'Decision Boundry');
 hold off;
 
-
-
-
-
-
-
-
-
-
-
-
